@@ -131,7 +131,7 @@ function App() {
         </div>
       </nav>
 
-      <header className="hero flex flex-col justify-center min-h-[50vh] p-12">
+      <header className="hero flex flex-col justify-center min-h-[60vh] p-12">
         <div className="p-12">
           <h1 className='font-bold !text-6xl'>Clear Fees. Total Transparency.</h1>
           <p className='text-lg text-gray-500'>Know exactly what you&apos;re paying before you swap. No hidden charges, no surprises.</p>
@@ -185,7 +185,7 @@ function App() {
         <div className="container">
           <h2 className="section-title text-2xl font-bold">Our Simple Fee Structure</h2>
           <p className="section-sub">One low, transparent fee. That’s it.</p>
-          <div className="card">
+          <div className="card max-w-[800px] mx-auto">
             <table className="table">
               <thead>
                 <tr>
@@ -220,7 +220,7 @@ function App() {
         <div className="container">
           <h2 className="section-title text-2xl font-bold">Calculate Your Transaction</h2>
           <p className="section-sub">See exactly what you’ll receive before you commit.</p>
-          <div className="card pad max-w-[600px] mx-auto min-h-[200px]">
+          <div className="card pad max-w-[600px] mx-auto">
             <div className="calc !gap-1">
               <div>You send</div>
               <div className="field" style={{ gap: 8 }}>

@@ -111,13 +111,13 @@ a {
 .result { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px dashed var(--border); border-radius: 10px; background: #f7fafc; }
 .result .value { color: var(--success); font-weight: 800; }
 
-.value-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.value-card { padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); text-align: center; }
+.value-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.value-card { padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); text-align: center; box-shadow: 0 2px 12px rgba(15,23,40,0.04); }
 .value-icon { width: 44px; height: 44px; margin: 0 auto 10px; border-radius: 12px; background: #eef2ff; color: #3358d4; display: flex; align-items: center; justify-content: center; font-weight: 900; }
 
 .faq { display: grid; gap: 10px; }
-.faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
-.faq-q { padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+.faq-item { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 1rem }
+.faq-q { padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; width: 100% }
 .faq-a { padding: 0 16px 16px; color: var(--muted); }
 
 .cta { background-color: var(--surface); text-align: center; padding: 56px 0 80px; }
