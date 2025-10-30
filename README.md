@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# VitalSwap: Transparent Crypto Swaps with React, TypeScript & Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to VitalSwap – a fully transparent crypto swap calculator app built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Live Prices**: Real-time crypto rates (ETH, BTC, USDT) via CoinGecko
+- **Transparent Fees**: Always see exactly what you’ll pay (no hidden charges)
+- **Intuitive UI**: Simple swaps, clean interfaces, mobile responsive
+- **Calculator**: Breakdown of receive amounts, network and platform fees
+- **Auto Sync**: Asset selections persist in URL for bookmarking/sharing
+- **FAQ & Full Demo**: Help and info included for clarity
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) for fast HMR-powered development
+- [Tailwind CSS](https://tailwindcss.com/) for UI utility styling
+- ESLint included (see below)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+git clone https://github.com/YOURNAME/vitalswap.git
+cd vitalswap
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Project Structure
+
+- `src/App.tsx`: Main application logic & UI.
+- `src/index.css`: Global, Tailwind & custom CSS.
+- `public/`: Static files.
+- `README.md`: This file.
+
+## Live Market Calculation
+
+- Swaps are calculated using the latest USD price for each crypto.
+- Fees and network costs are itemized before your transaction.
+
+## Fee Structure
+
+| Transaction Type   | Fee                 | Example                        |
+|--------------------|---------------------|--------------------------------|
+| Crypto Swap        | 0.5%                | Swap $1,000 BTC: $5 fee        |
+| Fiat Purchase      | 1.0% + Network Fee  | Buy $500 ETH: $5 + gas         |
+| Withdraw to Bank   | 0.2%                | Withdraw $2,000: $4 fee        |
+
+_Fees fund platform security, software quality, and fair operation._
+
+## Calculate Your Transaction
+
+Try out the in-app calculator:
+- Enter send amount in USD
+- Choose receive asset
+- Instantly see fee breakdown _before_ you swap
+
+## Demo
+
+![VitalSwap Screenshot](./screenshot.png)
+
+## FAQ
+
+**Q:** Are there hidden charges?  
+**A:** Never. All fees and network costs are presented before you swap.
+
+**Q:** Why do fees vary?  
+**A:** Different operations require different infrastructure and settlement.
+
+**Q:** Is the exchange rate real?  
+**A:** Yes – sourced live from reputable liquidity providers.
+
+## ESLint & TypeScript
+
+TypeScript and ESLint are configured for best practices and code quality.
+You can expand your lint setup for production by enabling type-aware rules:
 
 ```js
-export default defineConfig([
-  globalIgnores(['dist']),
+// eslint.config.js (example)
+import tseslint from '@typescript-eslint/eslint-plugin'
+export default [
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
+      // or tseslint.configs.strictTypeChecked for stricter
+      // Optional: tseslint.configs.stylisticTypeChecked for stylistic rules
     ],
     languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
+      parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: import.meta.dirname },
     },
   },
-])
+]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+[MIT](./LICENSE)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+Made with ❤️ by [YOURNAME] – Fork or contribute!
