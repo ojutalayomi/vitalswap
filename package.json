@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tailwind:build": "npx tailwindcss/cli -i ./src/index.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
+    "lucide-react": "^0.548.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.16"
