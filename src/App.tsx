@@ -118,13 +118,13 @@ function App() {
             <span className="logo-dot" />
             VitalSwap
           </div>
-          <div className="nav-links">
-            <a href="#swap">Swap</a>
-            <a href="#fees">Fees</a>
-            <a href="#about">About</a>
-            <a href="#help">Help Center</a>
-          </div>
-          <div className="nav-cta">
+          <div className="nav-cta flex flex-row gap-2 items-center justify-center">
+            <div className="nav-links">
+              <a href="#swap">Swap</a>
+              <a href="#fees">Fees</a>
+              <a href="#about">About</a>
+              <a href="#help">Help Center</a>
+            </div>
             <button className="btn" style={{ background: 'transparent', color: '#0f1728', borderColor: 'var(--border)' }}>Log In</button>
             <button className="btn">Sign Up</button>
           </div>
